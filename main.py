@@ -49,8 +49,10 @@ def main():
         sys.exit(1)
 
     try:
-        # visual_sig(data)
+        visual_sig(data)
         visual_frequency(data)
+        plt.savefig("signal_plot.png")
+        print("Signal plot saved into 'signal_plot.png'")
 
     except FileNotFoundError:
         print(f"File not found: {file_path}")
